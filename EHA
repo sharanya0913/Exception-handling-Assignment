@@ -1,0 +1,29 @@
+# 1. Write a function to compute 5/0 and use try/except to catch the exceptions.
+
+def divide():
+    return 5/0
+
+try:
+    divide()
+except ZeroDivisionError as ze:
+    print("Why to divide a number by ZERO!!")
+except:
+    print("Any other exception")
+    
+    
+    
+    '''
+    2. Implement a Python program to generate all sentences where subject is in
+["Americans", "Indians"] and verb is in ["Play", "watch"] and the object is in
+["Baseball","cricket"].
+'''
+
+subjects=["Americans ","Indians"]
+verbs=["play","watch"]
+objects=["Baseball","Cricket"]
+
+# list comprehension
+
+sentence_list = [(sub+" "+vb+" "+obj) for sub in subjects for vb in verbs for obj in objects]
+for sentence in sentence_list:
+    print(sentence)
